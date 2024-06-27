@@ -12,5 +12,5 @@ echo -n "" > $(dirname $0)/input.csv
 for _ in {1..100}
 do
 	np=$(numberplate)
-	echo "$(shuf -er -n1 "$(invalid_numberplate)" "$np" "$np" "$np"),$(echo "$(date +%N) % (50 * 3600) + 30 * 3600" | bc)" >> input.csv
+	echo "$(shuf -er -n1 "$(invalid_numberplate)" "$np" "$np" "$np"),$(echo "$(date +%N) % (50 * 3600) + 30 * 3600" | bc)" >> $(dirname $0)/input.csv
 done
