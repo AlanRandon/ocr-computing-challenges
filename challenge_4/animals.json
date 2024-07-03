@@ -1,0 +1,141 @@
+[
+  "Question",
+  {
+    "question": "Is it a mammal?",
+    "yes": [
+      "Question",
+      {
+        "question": "Does it live in the sea?",
+        "yes": [
+          "Question",
+          {
+            "question": "Is it a seal?",
+            "yes": ["Item", "seal"],
+            "no": [
+              "Question",
+              {
+                "question": "Is it a dolphin?",
+                "yes": ["Item", "dolphin"],
+                "no": ["Item", "whale"]
+              }
+            ]
+          }
+        ],
+        "no": [
+          "Question",
+          {
+            "question": "Is it a type of cat?",
+            "yes": [
+              "Question",
+              {
+                "question": "Is it a big cat?",
+                "yes": [
+                  "Question",
+                  {
+                    "question": "Is it native to a desert?",
+                    "yes": ["Item", "lion"],
+                    "no": ["Item", "tiger"]
+                  }
+                ],
+                "no": ["Item", "cat"]
+              }
+            ],
+            "no": [
+              "Question",
+              {
+                "question": "Are large groups of it kept on farms?",
+                "yes": [
+                  "Question",
+                  {
+                    "question": "Can it have horns?",
+                    "yes": [
+                      "Question",
+                      {
+                        "question": "Can wool be harvested from it?",
+                        "yes": ["Item", "sheep"],
+                        "no": ["Item", "cow"]
+                      }
+                    ],
+                    "no": ["Item", "pig"]
+                  }
+                ],
+                "no": [
+                  "Question",
+                  {
+                    "question": "Can it be used as mode of transport?",
+                    "yes": ["Item", "horse"],
+                    "no": ["Item", "dog"]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "no": [
+      "Question",
+      {
+        "question": "Is it an insect or arthropod?",
+        "yes": [
+          "Question",
+          {
+            "question": "Is it a pollinator?",
+            "yes": [
+              "Question",
+              {
+                "question": "Does it die if it stings a human?",
+                "yes": ["Item", "bee"],
+                "no": ["Item", "wasp"]
+              }
+            ],
+            "no": [
+              "Question",
+              {
+                "question": "Does it have eight legs?",
+                "yes": ["Item", "spider"],
+                "no": [
+                  "Question",
+                  {
+                    "question": "Is it an ant?",
+                    "yes": ["Item", "ant"],
+                    "no": ["Item", "termite"]
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "no": [
+          "Question",
+          {
+            "question": "Does it live in or near water?",
+            "yes": [
+              "Question",
+              {
+                "question": "Is it a bird?",
+                "yes": ["Item", "penguin"],
+                "no": [
+                  "Question",
+                  {
+                    "question": "Does it have eight limbs?",
+                    "yes": ["Item", "octopus"],
+                    "no": ["Item", "squid"]
+                  }
+                ]
+              }
+            ],
+            "no": [
+              "Question",
+              {
+                "question": "Can it fly?",
+                "yes": ["Item", "sparrow"],
+                "no": ["Item", "ostrich"]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]
