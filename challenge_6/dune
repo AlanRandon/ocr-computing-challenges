@@ -1,0 +1,4 @@
+(executable
+ (public_name ocr_computing_challenges)
+ (name main)
+ (libraries challenge_6_lib))

@@ -1,0 +1,6 @@
+(library
+ (public_name ocr_computing_challenges)
+ (name challenge_6_lib)
+ (inline_tests)
+ (libraries ppx_show.runtime)
+ (preprocess (pps ppx_deriving.show ppx_inline_test ppx_assert)))
