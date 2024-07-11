@@ -34,7 +34,8 @@ module Unit = struct
 
   let approx_eq a b =
     let difference = a.multiplier -. b.multiplier in
-    (-.Float.epsilon < difference || difference < Float.epsilon)
+    -.Float.epsilon < difference
+    && difference < Float.epsilon
     && a.grams_power = b.grams_power
     && a.celcius_power = b.celcius_power
     && a.fahrenheit_power = b.fahrenheit_power
@@ -212,8 +213,6 @@ let test_unit_equal parsed expected =
       if not (Unit.approx_eq parsed expected) then (
         Printf.printf "Parsed: %s\n" (Unit.show parsed);
         Printf.printf "Expected: %s\n" (Unit.show expected);
-        (* Printf.printf "%b \n" *)
-        (*   (parsed.multiplier -. expected.multiplier > -.Float.epsilon); *)
         false)
       else true
   | Error err, _ | _, Error err ->
