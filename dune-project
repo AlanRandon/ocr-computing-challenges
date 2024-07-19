@@ -5,22 +5,27 @@
 (generate_opam_files true)
 
 (source
- (github username/reponame))
+ (github AlanRandon/ocr-computing-challenges))
 
-(authors "Author Name")
+(authors "Alan Randon")
 
-(maintainers "Maintainer Name")
-
-(license LICENSE)
-
-(documentation https://url/to/documentation)
+(maintainers "Alan Randon")
 
 (package
  (name ocr_computing_challenges)
- (synopsis "A short synopsis")
- (description "A longer description")
- (depends ocaml dune)
- (tags
-  (topics "to describe" your project)))
+ (synopsis "OCR computing challenges")
+ (description "OCR computing challenges from GCSE to A-level")
+ (depends
+   ocaml
+   dune
+   core
+   core_unix
+   ppx_jane
+   ppx_show
+   ppx_deriving
+   ppx_inline_test
+   yojson
+   ppx_deriving_yojson
+   otoml))
 
 ; See the complete stanza docs at https://dune.readthedocs.io/en/stable/reference/dune-project/index.html

@@ -1,0 +1,5 @@
+(executable
+ (public_name ocr_computing_challenges)
+ (name main)
+ (libraries core core_unix.command_unix ppx_jane otoml)
+ (preprocess (pps ppx_jane ppx_deriving.show)))

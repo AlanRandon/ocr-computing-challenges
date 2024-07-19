@@ -1,0 +1,9 @@
+[[questions]]
+question = "Which language is complied?"
+correct = "C"
+incorrect = ["Javascript", "Python"]
+
+[[questions]]
+question = "What kind of architecture is x86-64?"
+correct = "CISC"
+incorrect = ["RISC"]
