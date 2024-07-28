@@ -18,6 +18,9 @@ depends: [
   "yojson"
   "ppx_deriving_yojson"
   "otoml"
+  "nottui"
+  "nottui-pretty"
+  "calendar"
   "odoc" {with-doc}
 ]
 build: [

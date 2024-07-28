@@ -1,0 +1,5 @@
+(executable
+ (public_name ocr_computing_challenges)
+ (name main)
+ (libraries core ppx_jane calendar nottui core_unix.command_unix core_unix.filename_unix)
+ (preprocess (pps ppx_jane)))

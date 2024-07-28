@@ -26,6 +26,9 @@
    ppx_inline_test
    yojson
    ppx_deriving_yojson
-   otoml))
+   otoml
+   nottui
+   nottui-pretty
+   calendar))
 
 ; See the complete stanza docs at https://dune.readthedocs.io/en/stable/reference/dune-project/index.html
