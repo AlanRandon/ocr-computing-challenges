@@ -80,13 +80,13 @@ precedence :: BinaryTerm -> Expression
 precedence (BinaryTerm term Nothing) = term
 precedence (BinaryTerm lhs (Just (BinaryOp op (BinaryTerm rhs Nothing)))) =
         BinaryExpression lhs op rhs
-precedence (BinaryTerm a (Just (BinaryOp lop (BinaryTerm b (Just (BinaryOp rop c)))))) =
+precedence (BinaryTerm a (Just (BinaryOp leftOp right@(BinaryTerm b (Just (BinaryOp rightOp c)))))) =
         if lpower > rpower
-                then BinaryExpression a lop $ BinaryExpression b rop $ precedence c
-                else BinaryExpression (BinaryExpression a lop b) rop (precedence c)
+                then BinaryExpression (BinaryExpression a leftOp b) rightOp (precedence c)
+                else BinaryExpression a leftOp (precedence right)
     where
-        (_, lpower) = bindingPower lop
-        (rpower, _) = bindingPower lop
+        (_, lpower) = bindingPower leftOp
+        (rpower, _) = bindingPower rightOp
 
 parse :: [Token] -> (Maybe Expression, [Token])
 parse tokens =
