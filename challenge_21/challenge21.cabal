@@ -1,0 +1,21 @@
+cabal-version:      3.0
+name:               challenge21
+version:            0.1.0.0
+author:             Alan Randon
+maintainer:         alan.randon@outlook.com
+build-type:         Simple
+
+common warnings
+    ghc-options: -Wall
+
+executable challenge21
+    import:           warnings
+    main-is:          Main.hs
+    build-depends:
+        base ^>=4.18.2.1,
+        optparse-applicative ^>=0.18.1.0,
+        chronos ^>= 1.1.6.1,
+        binary ^>= 0.8.9.1,
+        directory ^>= 1.3.8.5
+    hs-source-dirs:   app
+    default-language: Haskell2010
