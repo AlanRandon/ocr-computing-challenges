@@ -16,10 +16,12 @@
           shellHook = "exec \${SHELL:=sh}";
 
           buildInputs =
-            [
-              (pkgs.haskellPackages.ghcWithPackages
+            with pkgs; [
+              opam
+              (haskellPackages.ghcWithPackages
                 (pkgs: with pkgs; [
                   cabal-install
+                  cabal-gild
                   haskell-language-server
                 ]))
             ];
